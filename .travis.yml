@@ -24,9 +24,9 @@ matrix:
     - env: TOXENV=pydocstyle
 
 install:
-    - pip install -U pip setuptools wheel | cat 
+    - pip install -U pip setuptools wheel | cat
     - pip install -U tox | cat
-script: tox -v -- -v
+script: tox -v -- -v -n 2
 after_success:
   - .tox/$TRAVIS_PYTHON_VERSION/bin/coverage xml
   - .tox/$TRAVIS_PYTHON_VERSION/bin/codecov -e TOXENV
