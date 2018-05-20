@@ -1,11 +1,9 @@
 from __future__ import absolute_import, unicode_literals
 
 import pytest
-
 from case import Mock, patch, skip
 
 from kombu.five import Empty
-
 from kombu.transport.etcd import Channel, Transport
 
 

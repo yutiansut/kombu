@@ -2,11 +2,11 @@
 from __future__ import absolute_import, unicode_literals
 
 import os
-
 from collections import deque
 
 from . import exceptions
-from .five import Empty, LifoQueue as _LifoQueue
+from .five import Empty
+from .five import LifoQueue as _LifoQueue
 from .utils.compat import register_after_fork
 from .utils.functional import lazy
 

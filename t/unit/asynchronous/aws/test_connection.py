@@ -6,21 +6,17 @@ from contextlib import contextmanager
 from case import Mock
 from vine.abstract import Thenable
 
+from kombu.asynchronous import http
+from kombu.asynchronous.aws.connection import (AsyncAWSQueryConnection,
+                                               AsyncConnection,
+                                               AsyncHTTPResponse,
+                                               AsyncHTTPSConnection)
+from kombu.asynchronous.aws.ext import boto3
 from kombu.exceptions import HttpError
 from kombu.five import WhateverIO
-
-from kombu.asynchronous import http
-from kombu.asynchronous.aws.connection import (
-    AsyncHTTPSConnection,
-    AsyncHTTPResponse,
-    AsyncConnection,
-    AsyncAWSQueryConnection,
-)
-from kombu.asynchronous.aws.ext import boto3
+from t.mocks import PromiseMock
 
 from .case import AWSCase
-
-from t.mocks import PromiseMock
 
 try:
     from urllib.parse import urlparse, parse_qs

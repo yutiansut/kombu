@@ -5,14 +5,8 @@ import sys
 
 from case import ANY, Mock, patch
 
-from kombu.log import (
-    get_logger,
-    get_loglevel,
-    safeify_format,
-    Log,
-    LogMixin,
-    setup_logging,
-)
+from kombu.log import (Log, LogMixin, get_logger, get_loglevel, safeify_format,
+                       setup_logging)
 
 
 class test_get_logger:

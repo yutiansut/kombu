@@ -1,18 +1,18 @@
 from __future__ import absolute_import, unicode_literals
 
 import io
-import pytest
-import warnings
 import socket
+import warnings
 
+import pytest
 from case import MagicMock, Mock, patch
 
 from kombu import Connection
 from kombu.compression import compress
-from kombu.exceptions import ResourceError, ChannelError
+from kombu.exceptions import ChannelError, ResourceError
+from kombu.five import PY3, monotonic
 from kombu.transport import virtual
 from kombu.utils.uuid import uuid
-from kombu.five import PY3, monotonic
 
 PRINT_FQDN = 'builtins.print' if PY3 else '__builtin__.print'
 

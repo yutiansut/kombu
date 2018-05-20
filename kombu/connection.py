@@ -4,7 +4,6 @@ from __future__ import absolute_import, unicode_literals
 import os
 import socket
 import sys
-
 from collections import OrderedDict
 from contextlib import contextmanager
 from itertools import count, cycle
@@ -14,9 +13,8 @@ from operator import itemgetter
 # (Issue #112)
 from kombu import exceptions
 
-from .five import (
-    bytes_if_py2, python_2_unicode_compatible, reraise, string_t, text_t,
-)
+from .five import (bytes_if_py2, python_2_unicode_compatible, reraise,
+                   string_t, text_t)
 from .log import get_logger
 from .resource import Resource
 from .transport import get_transport_cls, supports_librabbitmq
@@ -903,6 +901,8 @@ class Connection(object):
     @property
     def is_evented(self):
         return self.transport.implements.asynchronous
+
+
 BrokerConnection = Connection  # noqa: E305
 
 

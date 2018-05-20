@@ -6,7 +6,6 @@ import math
 import select as __select__
 import socket
 import sys
-
 from numbers import Integral
 
 from . import fileno
@@ -133,8 +132,8 @@ class _kqueue(object):
         kevents = []
         if events & WRITE:
             kevents.append(kevent(fd,
-                           filter=KQ_FILTER_WRITE,
-                           flags=flags))
+                                  filter=KQ_FILTER_WRITE,
+                                  flags=flags))
         if not kevents or events & READ:
             kevents.append(
                 kevent(fd, filter=KQ_FILTER_READ, flags=flags),

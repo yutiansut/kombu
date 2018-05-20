@@ -1,8 +1,8 @@
 from __future__ import absolute_import, unicode_literals
 
 import datetime
-import pytest
 
+import pytest
 from case import MagicMock, call, patch, skip
 
 from kombu import Connection

@@ -2,22 +2,20 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import, unicode_literals
 
-import pytest
 import sys
-
 from base64 import b64decode
 
+import pytest
 from case import call, mock, patch, skip
 
-from kombu.exceptions import ContentDisallowed, EncodeError, DecodeError
-from kombu.five import text_t, bytes_t
-from kombu.serialization import (
-    registry, register, SerializerNotInstalled,
-    raw_encode, register_yaml, register_msgpack,
-    dumps, loads, pickle, pickle_protocol,
-    unregister, register_pickle, enable_insecure_serializers,
-    disable_insecure_serializers,
-)
+from kombu.exceptions import ContentDisallowed, DecodeError, EncodeError
+from kombu.five import bytes_t, text_t
+from kombu.serialization import (SerializerNotInstalled,
+                                 disable_insecure_serializers, dumps,
+                                 enable_insecure_serializers, loads, pickle,
+                                 pickle_protocol, raw_encode, register,
+                                 register_msgpack, register_pickle,
+                                 register_yaml, registry, unregister)
 from kombu.utils.encoding import str_to_bytes
 
 # For content_encoding tests

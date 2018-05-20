@@ -3,8 +3,8 @@ from __future__ import absolute_import, unicode_literals
 
 import datetime
 
-from sqlalchemy import (Column, Integer, String, Text, DateTime,
-                        Sequence, Boolean, ForeignKey, SmallInteger)
+from sqlalchemy import (Boolean, Column, DateTime, ForeignKey, Integer,
+                        Sequence, SmallInteger, String, Text)
 from sqlalchemy.ext.declarative import declarative_base, declared_attr
 from sqlalchemy.orm import relation
 from sqlalchemy.schema import MetaData

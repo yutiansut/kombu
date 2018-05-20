@@ -1,12 +1,10 @@
 from __future__ import absolute_import, unicode_literals
 
-from kombu import Consumer, Producer, Exchange, Queue
-from kombu.five import range
-from kombu.utils.compat import nested
-
 from funtests import transport
-
+from kombu import Consumer, Exchange, Producer, Queue
+from kombu.five import range
 from kombu.tests.case import skip
+from kombu.utils.compat import nested
 
 
 @skip.unless_module('pymongo')

@@ -1,16 +1,13 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import, unicode_literals
 
-from case import Mock, MagicMock
+from case import MagicMock, Mock
 
-from kombu.asynchronous.aws.sqs.connection import (
-    AsyncSQSConnection
-)
 from kombu.asynchronous.aws.ext import boto3
+from kombu.asynchronous.aws.sqs.connection import AsyncSQSConnection
 from kombu.asynchronous.aws.sqs.message import AsyncMessage
 from kombu.asynchronous.aws.sqs.queue import AsyncQueue
 from kombu.utils.uuid import uuid
-
 from t.mocks import PromiseMock
 
 from ..case import AWSCase

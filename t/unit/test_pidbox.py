@@ -1,13 +1,12 @@
 from __future__ import absolute_import, unicode_literals
 
-import pytest
 import socket
 import warnings
 
+import pytest
 from case import Mock, patch
 
-from kombu import Connection
-from kombu import pidbox
+from kombu import Connection, pidbox
 from kombu.exceptions import ContentDisallowed, InconsistencyError
 from kombu.utils.uuid import uuid
 

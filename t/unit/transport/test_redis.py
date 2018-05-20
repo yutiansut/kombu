@@ -1,17 +1,20 @@
 from __future__ import absolute_import, unicode_literals
 
-import pytest
 import socket
 import types
-
 from collections import defaultdict
 from itertools import count
 
-from case import ANY, ContextMock, Mock, call, mock, skip, patch
+import pytest
+from case import ANY, ContextMock, Mock, call, mock, patch, skip
 
-from kombu import Connection, Exchange, Queue, Consumer, Producer
+from kombu import Connection, Consumer, Exchange, Producer, Queue
 from kombu.exceptions import InconsistencyError, VersionMismatch
-from kombu.five import Empty, Queue as _Queue, bytes_if_py2
+from kombu.five import Empty
+from kombu.five import Queue as _Queue
+from kombu.five import bytes_if_py2
+# must import after poller patch, pep8 complains
+from kombu.transport import redis  # noqa
 from kombu.transport import virtual
 from kombu.utils import eventio  # patch poll
 from kombu.utils.json import dumps
@@ -32,8 +35,6 @@ class _poll(eventio._select):
 
 
 eventio.poll = _poll
-# must import after poller patch, pep8 complains
-from kombu.transport import redis  # noqa
 
 
 class ResponseError(Exception):

@@ -4,12 +4,11 @@ from __future__ import absolute_import, unicode_literals
 import os
 import socket
 import threading
-
 from collections import deque
 from contextlib import contextmanager
 from functools import partial
 from itertools import count
-from uuid import uuid5, uuid4, uuid3, NAMESPACE_OID
+from uuid import NAMESPACE_OID, uuid3, uuid4, uuid5
 
 from amqp import RecoverableConnectionError
 

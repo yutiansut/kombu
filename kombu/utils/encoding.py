@@ -12,7 +12,6 @@ import traceback
 
 from kombu.five import PY3, text_t
 
-
 #: safe_str takes encoding from this file by default.
 #: :func:`set_default_encoding_file` can used to set the
 #: default output file.
@@ -125,7 +124,6 @@ else:
         if isinstance(s, bytes):
             return s.decode(encoding, errors)
         return s
-
 
     def _safe_str(s, errors='replace', file=None):  # noqa
         encoding = default_encoding(file)

@@ -2,8 +2,9 @@ from __future__ import absolute_import, unicode_literals
 
 import atexit
 import os
-import pytest
 import sys
+
+import pytest
 
 from kombu.exceptions import VersionMismatch
 

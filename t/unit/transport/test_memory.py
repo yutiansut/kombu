@@ -1,9 +1,10 @@
 from __future__ import absolute_import, unicode_literals
 
-import pytest
 import socket
 
-from kombu import Connection, Exchange, Queue, Consumer, Producer
+import pytest
+
+from kombu import Connection, Consumer, Exchange, Producer, Queue
 
 
 class test_MemoryTransport:

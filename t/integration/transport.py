@@ -7,13 +7,11 @@ import time
 import unittest
 import warnings
 import weakref
+from hashlib import sha256 as _digest
 
 from case.skip import SkipTest
 
-from hashlib import sha256 as _digest
-
-from kombu import Connection
-from kombu import Exchange, Queue
+from kombu import Connection, Exchange, Queue
 from kombu.five import buffer_t, range
 from kombu.utils.encoding import str_to_bytes
 
@@ -167,7 +165,7 @@ class TransportCase(unittest.TestCase):
             return
         bytes = min(x for x in [bytes, self.message_size_limit] if x)
         messages = [''.join(random.choice(charset)
-                    for j in range(bytes)) + '--%s' % n
+                            for j in range(bytes)) + '--%s' % n
                     for i in range(n)]
         digests = []
         chan1 = self.connection.channel()

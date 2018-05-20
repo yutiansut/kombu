@@ -2,11 +2,9 @@
 from __future__ import absolute_import, unicode_literals
 
 import socket
-
 from collections import deque
 
-from . import entity
-from . import messaging
+from . import entity, messaging
 from .connection import maybe_channel
 from .five import Empty, monotonic
 

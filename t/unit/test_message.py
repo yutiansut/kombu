@@ -1,8 +1,8 @@
 from __future__ import absolute_import, unicode_literals
 
-import pytest
 import sys
 
+import pytest
 from case import Mock, patch
 
 from kombu.message import Message

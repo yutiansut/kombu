@@ -6,16 +6,15 @@ It uses python-consul for talking to Consul's HTTP API
 """
 from __future__ import absolute_import, unicode_literals
 
-import uuid
 import socket
-
+import uuid
 from collections import defaultdict
 from contextlib import contextmanager
 
 from kombu.exceptions import ChannelError
 from kombu.five import Empty, monotonic
 from kombu.log import get_logger
-from kombu.utils.json import loads, dumps
+from kombu.utils.json import dumps, loads
 from kombu.utils.objects import cached_property
 
 from . import virtual

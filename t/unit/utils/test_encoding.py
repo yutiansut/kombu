@@ -2,16 +2,13 @@
 from __future__ import absolute_import, unicode_literals
 
 import sys
-
 from contextlib import contextmanager
 
 from case import patch, skip
 
-from kombu.five import bytes_t, string_t, string
-from kombu.utils.encoding import (
-    get_default_encoding_file, safe_str,
-    set_default_encoding_file, default_encoding,
-)
+from kombu.five import bytes_t, string, string_t
+from kombu.utils.encoding import (default_encoding, get_default_encoding_file,
+                                  safe_str, set_default_encoding_file)
 
 
 @contextmanager
@@ -67,6 +64,7 @@ def test_default_encode():
 
 class newbytes(bytes):
     """Mock class to simulate python-future newbytes class"""
+
     def __repr__(self):
         return 'b' + super(newbytes, self).__repr__()
 

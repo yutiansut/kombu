@@ -5,7 +5,7 @@ from itertools import count
 
 from .common import maybe_declare
 from .compression import compress
-from .connection import maybe_channel, is_connection
+from .connection import is_connection, maybe_channel
 from .entity import Exchange, Queue, maybe_delivery_mode
 from .exceptions import ContentDisallowed
 from .five import items, python_2_unicode_compatible, text_t, values

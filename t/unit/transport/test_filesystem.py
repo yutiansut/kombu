@@ -5,7 +5,7 @@ import tempfile
 from case import skip
 from case.skip import SkipTest
 
-from kombu import Connection, Exchange, Queue, Consumer, Producer
+from kombu import Connection, Consumer, Exchange, Producer, Queue
 
 
 @skip.if_win32()

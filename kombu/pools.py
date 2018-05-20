@@ -2,7 +2,6 @@
 from __future__ import absolute_import, unicode_literals
 
 import os
-
 from itertools import chain
 
 from .connection import Resource
@@ -107,6 +106,8 @@ class Connections(PoolGroup):
 
     def create(self, connection, limit):
         return connection.Pool(limit=limit)
+
+
 connections = register_group(Connections(limit=use_global_limit))  # noqa: E305
 
 
@@ -115,6 +116,8 @@ class Producers(PoolGroup):
 
     def create(self, connection, limit):
         return ProducerPool(connections[connection], limit=limit)
+
+
 producers = register_group(Producers(limit=use_global_limit))  # noqa: E305
 
 

@@ -1,19 +1,15 @@
 from __future__ import absolute_import, unicode_literals
 
-import pytest
 import socket
 
+import pytest
 from amqp import RecoverableConnectionError
 from case import ContextMock, Mock, patch
 
 from kombu import common
-from kombu.common import (
-    Broadcast, maybe_declare,
-    send_reply, collect_replies,
-    declaration_cached, ignore_errors,
-    QoS, PREFETCH_COUNT_MAX, generate_oid
-)
-
+from kombu.common import (PREFETCH_COUNT_MAX, Broadcast, QoS, collect_replies,
+                          declaration_cached, generate_oid, ignore_errors,
+                          maybe_declare, send_reply)
 from t.mocks import MockPool
 
 

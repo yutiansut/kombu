@@ -2,14 +2,13 @@
 """Amazon AWS Connection."""
 from __future__ import absolute_import, unicode_literals
 
+import io
+
 from vine import promise, transform
 
 from kombu.asynchronous.aws.ext import AWSRequest, get_response
-
 from kombu.asynchronous.http import Headers, Request, get_client
 from kombu.five import items, python_2_unicode_compatible
-
-import io
 
 try:  # pragma: no cover
     from email import message_from_bytes

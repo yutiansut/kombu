@@ -1,15 +1,13 @@
 from __future__ import absolute_import, unicode_literals
 
 import pytest
-
 from case import Mock
 
 from kombu import Connection, Consumer, Exchange, Producer, Queue
 from kombu.five import text_t
 from kombu.message import Message
-from kombu.transport.base import (
-    StdChannel, Transport, Management, to_rabbitmq_queue_arguments,
-)
+from kombu.transport.base import (Management, StdChannel, Transport,
+                                  to_rabbitmq_queue_arguments)
 
 
 @pytest.mark.parametrize('args,input,expected', [

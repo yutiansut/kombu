@@ -3,7 +3,6 @@ from __future__ import absolute_import, unicode_literals
 
 import socket
 import warnings
-
 from collections import defaultdict, deque
 from contextlib import contextmanager
 from copy import copy
@@ -11,7 +10,7 @@ from itertools import count
 from threading import local
 from time import time
 
-from . import Exchange, Queue, Consumer, Producer
+from . import Consumer, Exchange, Producer, Queue
 from .clocks import LamportClock
 from .common import maybe_declare, oid_from
 from .exceptions import InconsistencyError

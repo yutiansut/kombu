@@ -2,7 +2,6 @@
 from __future__ import absolute_import, unicode_literals
 
 import pytest
-
 from case import Mock, call, patch, skip
 
 from kombu.asynchronous.http.curl import READ, WRITE, CurlClient

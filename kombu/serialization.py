@@ -3,24 +3,23 @@ from __future__ import absolute_import, unicode_literals
 
 import codecs
 import os
-import sys
-
 import pickle as pypickle
+import sys
+from collections import namedtuple
+from contextlib import contextmanager
+from io import BytesIO
+
+from .exceptions import (ContentDisallowed, DecodeError, EncodeError,
+                         SerializerNotInstalled)
+from .five import reraise, text_t
+from .utils.compat import entrypoints
+from .utils.encoding import bytes_t, bytes_to_str, str_to_bytes
+
 try:
     import cPickle as cpickle
 except ImportError:  # pragma: no cover
     cpickle = None  # noqa
 
-from collections import namedtuple
-from contextlib import contextmanager
-from io import BytesIO
-
-from .exceptions import (
-    ContentDisallowed, DecodeError, EncodeError, SerializerNotInstalled
-)
-from .five import reraise, text_t
-from .utils.compat import entrypoints
-from .utils.encoding import bytes_to_str, str_to_bytes, bytes_t
 
 __all__ = ['pickle', 'loads', 'dumps', 'register', 'unregister']
 SKIP_DECODE = frozenset(['binary', 'ascii-8bit'])

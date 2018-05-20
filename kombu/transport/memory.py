@@ -3,8 +3,7 @@ from __future__ import absolute_import, unicode_literals
 
 from kombu.five import Queue, values
 
-from . import base
-from . import virtual
+from . import base, virtual
 
 
 class Channel(virtual.Channel):

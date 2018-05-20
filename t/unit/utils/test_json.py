@@ -1,12 +1,11 @@
 from __future__ import absolute_import, unicode_literals
 
-import pytest
-import pytz
-
 from datetime import datetime
 from decimal import Decimal
 from uuid import uuid4
 
+import pytest
+import pytz
 from case import MagicMock, Mock, skip
 
 from kombu.five import text_t

@@ -42,7 +42,7 @@ import socket
 import string
 import uuid
 
-from vine import transform, ensure_promise, promise
+from vine import ensure_promise, promise, transform
 
 from kombu.asynchronous import get_event_loop
 from kombu.asynchronous.aws.ext import boto3, exceptions
@@ -52,7 +52,7 @@ from kombu.five import Empty, range, string_t, text_t
 from kombu.log import get_logger
 from kombu.utils import scheduling
 from kombu.utils.encoding import bytes_to_str, safe_str
-from kombu.utils.json import loads, dumps
+from kombu.utils.json import dumps, loads
 from kombu.utils.objects import cached_property
 
 from . import virtual

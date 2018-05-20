@@ -1,17 +1,14 @@
 from __future__ import absolute_import, unicode_literals
 
-import pytest
-
 from io import BytesIO
 
-from vine import promise
-
+import pytest
 from case import Mock, skip
+from vine import promise
 
 from kombu.asynchronous import http
 from kombu.asynchronous.http.base import BaseClient, normalize_header
 from kombu.exceptions import HttpError
-
 from t.mocks import PromiseMock
 
 

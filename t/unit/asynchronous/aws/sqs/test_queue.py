@@ -2,12 +2,10 @@
 from __future__ import absolute_import, unicode_literals
 
 import pytest
-
 from case import Mock
 
 from kombu.asynchronous.aws.sqs.message import AsyncMessage
 from kombu.asynchronous.aws.sqs.queue import AsyncQueue
-
 from t.mocks import PromiseMock
 
 from ..case import AWSCase

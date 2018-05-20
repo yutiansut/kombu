@@ -7,7 +7,7 @@ import decimal
 import json as stdjson
 import uuid
 
-from kombu.five import PY3, buffer_t, text_t, bytes_t
+from kombu.five import PY3, buffer_t, bytes_t, text_t
 
 try:
     from django.utils.functional import Promise as DjangoPromise

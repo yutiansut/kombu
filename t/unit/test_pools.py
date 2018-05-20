@@ -1,11 +1,9 @@
 from __future__ import absolute_import, unicode_literals
 
 import pytest
-
 from case import Mock
 
-from kombu import Connection, Producer
-from kombu import pools
+from kombu import Connection, Producer, pools
 from kombu.connection import ConnectionPool
 from kombu.utils.collections import eqhash
 

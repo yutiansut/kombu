@@ -1,15 +1,14 @@
 from __future__ import absolute_import, unicode_literals
 
 import pickle
-import pytest
 
+import pytest
 from case import Mock, call
 
 from kombu import Connection, Exchange, Producer, Queue, binding
 from kombu.abstract import MaybeChannelBound
 from kombu.exceptions import NotBoundError
 from kombu.serialization import registry
-
 from t.mocks import Transport
 
 

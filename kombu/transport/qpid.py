@@ -78,17 +78,21 @@ Celery, this can be accomplished by setting the
 """
 from __future__ import absolute_import, unicode_literals
 
-from collections import OrderedDict
 import os
 import select
 import socket
 import ssl
 import sys
 import uuid
-
+from collections import OrderedDict
 from gettext import gettext as _
 
 import amqp.protocol
+
+from kombu.five import PY3, Empty, items, monotonic
+from kombu.log import get_logger
+from kombu.transport import base
+from kombu.transport.virtual import Base64, Message
 
 try:
     import fcntl
@@ -114,12 +118,6 @@ try:
     import qpid
 except ImportError:  # pragma: no cover
     qpid = None
-
-
-from kombu.five import Empty, items, monotonic, PY3
-from kombu.log import get_logger
-from kombu.transport.virtual import Base64, Message
-from kombu.transport import base
 
 
 logger = get_logger(__name__)

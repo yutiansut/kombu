@@ -4,16 +4,14 @@ from __future__ import absolute_import, unicode_literals
 import random
 import sys
 import threading
-
 from collections import Iterable, Mapping, OrderedDict
 from itertools import count, repeat
 from time import sleep
 
 from vine.utils import wraps
 
-from kombu.five import (
-    UserDict, items, keys, python_2_unicode_compatible, string_t,
-)
+from kombu.five import (UserDict, items, keys, python_2_unicode_compatible,
+                        string_t)
 
 from .encoding import safe_repr as _safe_repr
 

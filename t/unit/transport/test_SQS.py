@@ -7,15 +7,13 @@ slightly.
 
 from __future__ import absolute_import, unicode_literals
 
-import pytest
 import random
 import string
 
+import pytest
 from case import Mock, skip
 
-from kombu import messaging
-from kombu import Connection, Exchange, Queue
-
+from kombu import Connection, Exchange, Queue, messaging
 from kombu.five import Empty
 from kombu.transport import SQS
 

@@ -1,9 +1,9 @@
 """Div. Utilities."""
-from __future__ import absolute_import, unicode_literals, print_function
-
-from .encoding import default_encode
+from __future__ import absolute_import, print_function, unicode_literals
 
 import sys
+
+from .encoding import default_encode
 
 
 def emergency_dump_state(state, open_file=open, dump=None, stderr=None):

@@ -1,24 +1,22 @@
 from __future__ import absolute_import, unicode_literals
 
-import pytest
 import select
-import ssl
 import socket
+import ssl
 import sys
 import time
 import uuid
-
 from collections import Callable, OrderedDict
 from itertools import count
 
+import pytest
 from case import Mock, call, patch, skip
 
-from kombu.five import Empty, keys, range, monotonic
+from kombu.five import Empty, keys, monotonic, range
 from kombu.transport.qpid import (AuthenticationFailure, Channel, Connection,
                                   ConnectionError, Message, NotFound, QoS,
                                   Transport)
 from kombu.transport.virtual import Base64
-
 
 QPID_MODULE = 'kombu.transport.qpid'
 

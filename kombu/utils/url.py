@@ -4,15 +4,16 @@ from __future__ import absolute_import, unicode_literals
 from collections import Mapping
 from functools import partial
 
+from kombu.five import bytes_if_py2, string_t
+
+from .compat import NamedTuple
+
 try:
     from urllib.parse import parse_qsl, quote, unquote, urlparse
 except ImportError:
     from urllib import quote, unquote                  # noqa
     from urlparse import urlparse, parse_qsl    # noqa
 
-from kombu.five import bytes_if_py2, string_t
-
-from .compat import NamedTuple
 
 safequote = partial(quote, safe=bytes_if_py2(''))
 
@@ -55,6 +56,8 @@ def url_to_parts(url):
         unquote(path or '') or None,
         dict(parse_qsl(parts.query)),
     )
+
+
 _parse_url = url_to_parts  # noqa
 
 

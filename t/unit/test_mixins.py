@@ -1,8 +1,8 @@
 from __future__ import absolute_import, unicode_literals
 
-import pytest
 import socket
 
+import pytest
 from case import ContextMock, Mock, patch
 
 from kombu.mixins import ConsumerMixin

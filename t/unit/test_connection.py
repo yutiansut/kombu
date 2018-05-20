@@ -1,11 +1,10 @@
 from __future__ import absolute_import, unicode_literals
 
 import pickle
-import pytest
 import socket
-
 from copy import copy, deepcopy
 
+import pytest
 from case import Mock, patch, skip
 
 from kombu import Connection, Consumer, Producer, parse_url
@@ -13,7 +12,6 @@ from kombu.connection import Resource
 from kombu.exceptions import OperationalError
 from kombu.five import items, range
 from kombu.utils.functional import lazy
-
 from t.mocks import Transport
 
 

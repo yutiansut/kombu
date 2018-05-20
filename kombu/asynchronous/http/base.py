@@ -3,7 +3,7 @@ from __future__ import absolute_import, unicode_literals
 
 import sys
 
-from vine import Thenable, promise, maybe_promise
+from vine import Thenable, maybe_promise, promise
 
 from kombu.exceptions import HttpError
 from kombu.five import items, python_2_unicode_compatible

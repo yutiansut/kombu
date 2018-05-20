@@ -4,17 +4,16 @@ from __future__ import absolute_import, unicode_literals
 
 import heapq
 import sys
-
 from collections import namedtuple
 from datetime import datetime
 from functools import total_ordering
+from time import time as _time
 from weakref import proxy as weakrefproxy
 
 from vine.utils import wraps
 
 from kombu.five import monotonic, python_2_unicode_compatible
 from kombu.log import get_logger
-from time import time as _time
 
 try:
     from pytz import utc

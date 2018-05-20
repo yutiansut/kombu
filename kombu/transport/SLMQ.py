@@ -1,14 +1,13 @@
 """SoftLayer Message Queue transport."""
 from __future__ import absolute_import, unicode_literals
 
+import os
 import socket
 import string
 
-import os
-
 from kombu.five import Empty, text_t
 from kombu.utils.encoding import bytes_to_str, safe_str
-from kombu.utils.json import loads, dumps
+from kombu.utils.json import dumps, loads
 from kombu.utils.objects import cached_property
 
 from . import virtual

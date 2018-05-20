@@ -3,10 +3,8 @@ from __future__ import absolute_import, unicode_literals
 
 import numbers
 import sys
-
-from functools import wraps
-
 from contextlib import contextmanager
+from functools import wraps
 
 from kombu.five import reraise
 

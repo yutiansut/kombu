@@ -10,7 +10,6 @@ from .ext import boto3
 from .message import AsyncMessage
 from .queue import AsyncQueue
 
-
 __all__ = ['AsyncSQSConnection']
 
 

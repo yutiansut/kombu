@@ -5,7 +5,6 @@ import logging
 import numbers
 import os
 import sys
-
 from logging.handlers import WatchedFileHandler
 
 from .five import string_t

@@ -1,9 +1,8 @@
 from __future__ import absolute_import, unicode_literals
 
-import pytest
-
 from datetime import datetime
 
+import pytest
 from case import Mock, patch
 
 from kombu.asynchronous.timer import Entry, Timer, to_timestamp
